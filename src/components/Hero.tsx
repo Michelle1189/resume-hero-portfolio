@@ -9,7 +9,16 @@ const Hero: React.FC = () => {
       className="min-h-screen flex items-center justify-center pt-16 pb-0 relative overflow-hidden"
     >
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-indigo-50 opacity-70"></div>
+        <video 
+          autoPlay 
+          loop 
+          muted 
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/video.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50/70 to-indigo-50/70 backdrop-blur-sm"></div>
       </div>
       
       <div className="section-container relative z-10">
