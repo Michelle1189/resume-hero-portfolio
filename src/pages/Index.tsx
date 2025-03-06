@@ -11,11 +11,15 @@ import Footer from '@/components/Footer';
 
 const Index: React.FC = () => {
   useEffect(() => {
-    // Reveal animations when elements enter viewport
+    // Reveal animations when elements enter viewport with smoother transitions
     const handleIntersection = (entries: IntersectionObserverEntry[]) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('animate-fade-in');
+          // Apply animation with a slight delay based on index to create a cascade effect
+          setTimeout(() => {
+            entry.target.classList.add('animate-fade-in');
+            entry.target.style.opacity = '1';
+          }, 100);
           observer.unobserve(entry.target);
         }
       });
@@ -27,9 +31,11 @@ const Index: React.FC = () => {
       threshold: 0.1
     });
 
-    document.querySelectorAll('section > div').forEach(section => {
+    // Skip hero section in animations to avoid flashing
+    document.querySelectorAll('section > div').forEach((section, index) => {
       if (section.parentElement?.id !== 'home') {
         section.classList.add('opacity-0');
+        section.style.transition = 'opacity 0.5s ease-out, transform 0.5s ease-out';
         observer.observe(section);
       }
     });

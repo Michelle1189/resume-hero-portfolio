@@ -14,37 +14,38 @@ const Hero: React.FC = () => {
           loop 
           muted 
           playsInline
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover opacity-90"
+          style={{ visibility: 'visible' }}
         >
           <source src="/video.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50/70 to-indigo-50/70 backdrop-blur-sm"></div>
       </div>
       
-      <div className="section-container relative z-10">
+      <div className="section-container relative z-10 opacity-100">
         <div className="max-w-4xl mx-auto text-center">
-          <span className="inline-block animate-fade-in text-sm md:text-base font-medium text-primary px-3 py-1 rounded-full bg-primary/10 mb-6">
+          <span className="inline-block text-sm md:text-base font-medium text-primary px-3 py-1 rounded-full bg-primary/10 mb-6">
             Information Systems & Mathematics Graduate
           </span>
           
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-6">
-            <div className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-white shadow-lg animate-fade-in">
+            <div className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-white shadow-lg">
               <img 
                 src="/lovable-uploads/3c183e05-3897-4785-9472-d8ab06bd4f7b.png" 
                 alt="Michelle Zhang" 
                 className="w-full h-full object-cover"
               />
             </div>
-            <h1 className="animate-slide-down text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight">
               Michelle Zhang
             </h1>
           </div>
           
-          <p className="animate-fade-in-delay text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
             Data Analyst & Machine Learning Specialist
           </p>
           
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 animate-fade-in-delay">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
             <a 
               href="#contact" 
               className="px-8 py-3 rounded-full bg-primary text-white font-medium transition-all hover:bg-primary/90 hover:shadow-lg"
@@ -59,7 +60,7 @@ const Hero: React.FC = () => {
             </a>
           </div>
           
-          <div className="mt-16 animate-fade-in-delay">
+          <div className="mt-16">
             <div className="flex justify-center space-x-6">
               {[
                 { name: 'Seattle, WA', icon: 'map-pin' },
@@ -87,7 +88,7 @@ const Hero: React.FC = () => {
             </div>
           </div>
           
-          <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2">
             <a href="#about" className="flex flex-col items-center text-muted-foreground hover:text-foreground transition-colors">
               <span className="text-xs mb-2">Scroll Down</span>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
