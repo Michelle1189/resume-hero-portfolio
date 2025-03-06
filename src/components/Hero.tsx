@@ -18,9 +18,18 @@ const Hero: React.FC = () => {
             Information Systems & Mathematics Graduate
           </span>
           
-          <h1 className="animate-slide-down text-4xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">
-            Michelle Zhang
-          </h1>
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-6">
+            <div className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-white shadow-lg animate-fade-in">
+              <img 
+                src="/lovable-uploads/3c183e05-3897-4785-9472-d8ab06bd4f7b.png" 
+                alt="Michelle Zhang" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <h1 className="animate-slide-down text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight">
+              Michelle Zhang
+            </h1>
+          </div>
           
           <p className="animate-fade-in-delay text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
             Data Analyst & Machine Learning Specialist

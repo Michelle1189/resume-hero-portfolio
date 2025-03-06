@@ -8,7 +8,16 @@ const Footer: React.FC = () => {
     <footer className="bg-gray-50 py-12 border-t border-muted">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center justify-center">
-          <div className="text-lg font-medium">Michelle Zhang</div>
+          <div className="flex items-center gap-4">
+            <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-white shadow-sm">
+              <img 
+                src="/lovable-uploads/3c183e05-3897-4785-9472-d8ab06bd4f7b.png" 
+                alt="Michelle Zhang" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="text-lg font-medium">Michelle Zhang</div>
+          </div>
           
           <div className="mt-2 text-sm text-muted-foreground">
             Data Analyst & Machine Learning Specialist
