@@ -1,24 +1,19 @@
 
 import React from 'react';
 import { cn } from '@/lib/utils';
+import { useToast } from '@/hooks/use-toast';
 
 const Hero: React.FC = () => {
+  const { toast } = useToast();
+
   return (
     <section 
       id="home" 
       className="min-h-screen flex items-center justify-center pt-16 pb-0 relative overflow-hidden"
     >
       <div className="absolute inset-0 z-0">
-        <video 
-          autoPlay 
-          loop 
-          muted 
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover opacity-90"
-          style={{ visibility: 'visible' }}
-        >
-          <source src="/video.mp4" type="video/mp4" />
-        </video>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-300/30 to-indigo-400/30 animate-gradient-x"></div>
+        <div className="absolute inset-0 bg-[url('/lovable-uploads/3c183e05-3897-4785-9472-d8ab06bd4f7b.png')] bg-cover bg-center opacity-10"></div>
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50/70 to-indigo-50/70 backdrop-blur-sm"></div>
       </div>
       
@@ -91,7 +86,7 @@ const Hero: React.FC = () => {
           <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2">
             <a href="#about" className="flex flex-col items-center text-muted-foreground hover:text-foreground transition-colors">
               <span className="text-xs mb-2">Scroll Down</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevron-down animate-bounce"><path d="m6 9 6 6 6-6"/></svg>
             </a>
           </div>
         </div>
